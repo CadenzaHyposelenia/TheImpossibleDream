@@ -1144,7 +1144,7 @@
 	Equally so, a capable instrument of bludgeoning and in dire straits a stick to protect yourself with. It bears a small sort of 'hook' by the hand."
 	icon_state = "cane"
 	icon = 'icons/roguetown/weapons/misc32.dmi'
-	force = 20 //on bar with daggers, below 2h-ing a quarterstaff this this isn't necessarily meant to be a replacement to quarterstaves, more an implement for characters that need their offhand i.e. bards or acolytes
+	force = 20 //on par with daggers, below 2h-ing a quarterstaff this this isn't necessarily meant to be a replacement to quarterstaves, more an implement for characters that need their offhand i.e. bards or acolytes
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_HIP
