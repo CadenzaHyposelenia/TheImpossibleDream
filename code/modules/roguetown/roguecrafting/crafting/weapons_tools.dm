@@ -363,6 +363,15 @@
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 0
 
+/datum/crafting_recipe/roguetown/survival/woodstaff/cane
+	name = "Walking Cane"
+	display_category = ITEM_CAT_WEAPONS_POLEARMS
+	category = "Tools"
+	result = list(/obj/item/rogueweapon/woodstaff/cane)
+	reqs = list(/obj/item/rogueweapon/woodstaff = 1)
+	skillcraft = /datum/skill/craft/carpentry
+	craftdiff = 1
+
 /datum/crafting_recipe/roguetown/survival/quarterstaff
 	name = "quarterstaff"
 	display_category = ITEM_CAT_WEAPONS_POLEARMS

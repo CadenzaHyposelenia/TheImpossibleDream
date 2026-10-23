@@ -62,6 +62,19 @@
 	tranged = TRUE
 	noaa = TRUE
 
+/datum/intent/thrust/cane //half of quarterstaff thrust version but 1 tile and no sweetspot
+	name = "thrust"
+	blade_class = BCLASS_BLUNT
+	icon_state = "instab"
+	hitsound = list('sound/combat/hits/blunt/bluntsmall (1).ogg', 'sound/combat/hits/blunt/bluntsmall (2).ogg')
+	penfactor = PEN_NONE
+	item_d_type = "blunt"
+	damfactor = 1.15
+	attack_verb = list("thrusts", "jabs")
+	reach = 1
+	clickcd = CLICK_CD_CHARGED
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+
 /// INTENT DATUMS	^
 
 /obj/item/rogueweapon/lordscepter
@@ -1124,3 +1137,25 @@
 /obj/item/rogueweapon/spear/keep_standard/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
+
+/obj/item/rogueweapon/woodstaff/cane
+	name = "walking cane"
+	desc = "A walking stick about the size of a small blade, elegant enough to walk around in public with and sturdy enough to support oneself. \
+	Equally so, a capable instrument of bludgeoning and in dire straits a stick to protect yourself with. It bears a small sort of 'hook' by the hand."
+	icon_state = "cane"
+	icon = 'icons/roguetown/weapons/misc32.dmi'
+	force = 20 //on bar with daggers, below 2h-ing a quarterstaff this this isn't necessarily meant to be a replacement to quarterstaves, more an implement for characters that need their offhand i.e. bards or acolytes
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_HIP
+	sharpness = IS_BLUNT
+	walking_stick = TRUE
+	bigboy = FALSE
+	wdefense = 6 // small bit higher than 1h-ing a staff since this is a mostly defensive archetype, mostly on par w/ 1h swords
+	gripsprite = TRUE
+	associated_skill = /datum/skill/combat/staves
+	special = /datum/special_intent/shin_swipe//experimental, backstep feels more like a 2h weapon thing
+	twirly = SKILL_LEVEL_APPRENTICE
+	gripped_intents = null
+	twirl_speed = 6
+	possible_item_intents = list(/datum/intent/spear/bash/staff, /datum/intent/thrust/cane, /datum/intent/dagger/sucker_punch) //sucker punch as a thematic treat cause this kit is kinda bad & lacks smash, totally fine w/ removing it
